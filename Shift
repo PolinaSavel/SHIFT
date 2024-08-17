@@ -1,0 +1,26 @@
+/*Входные данные: Массив = [2, 7, 11, 15], target = 9
+Выходные данные: 0, 1
+Пояснение: нам нужно найти в массиве два таких элемента, которые в сумме дадут значение
+“target”, в нашем случае равное 9. Такими элементами в массиве являются 2 и 7. То есть
+Массив[0] + Массив[1] = 9, значит в результате выводим эти индексы.*/
+public class SHIFT {
+    public static void main (String [] args){
+
+    int [] nums = new int [] {2, 7, 11, 15};
+    int target =9;
+    int i =0;
+    int j =0;
+    int result = nums[i]+nums[j];
+    for (int m=0; result!=target; m++) {
+        if (nums[i] + nums[j] == target) {
+            System.out.println("Индексы в массиве равные target: " + i + " и "+ j);
+            break;
+        } else if (j == 3) {
+            i++;
+            j = 0;
+        } else {
+            j++;
+        }
+    }
+    }
+}
